@@ -1,0 +1,137 @@
+/* Bootstrap icons */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+/* Import Google Fonts (e.g., Poppins for a modern look) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Basic body styling */
+body {
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font */
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa; /* Light grey background for the entire app */
+  color: #343a40; /* Dark grey for general text */
+}
+
+/* App container to push footer to bottom if desired (optional) */
+#root, .App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App > .container, .App > .container-fluid {
+  flex-grow: 1; /* Allows content area to grow and push footer down */
+}
+
+/* Navbar Enhancements */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for navbar */
+}
+
+.navbar-brand, .nav-link {
+  font-weight: 600;
+  transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+.nav-link:hover {
+  color: #add8e6 !important; /* Lighter blue on hover for links */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #212529; /* Slightly darker headings */
+  font-weight: 600;
+}
+
+/* Card Styling (General for all cards) */
+.card {
+  border: none; /* Remove default Bootstrap card border */
+  border-radius: 12px; /* More rounded corners for cards */
+  overflow: hidden; /* Important for nested images not to spill out */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2) !important; /* Stronger shadow on hover */
+}
+
+/* Card Image Styling (for Products/Sneakers) */
+.card-img-top {
+  width: 100%;
+  height: 250px; /* Increased height slightly for better product visibility */
+  object-fit: cover;
+  border-top-left-radius: 12px; /* Match card border radius */
+  border-top-right-radius: 12px; /* Match card border radius */
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #007bff; /* Standard Bootstrap blue */
+  border-color: #007bff;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  border-color: #0056b3;
+}
+
+.btn-danger {
+  background-color: #dc3545; /* Standard Bootstrap red */
+  border-color: #dc3545;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+/* Dropdown Toggle */
+.dropdown-toggle {
+  border-radius: 0.25rem; /* Standard Bootstrap button radius */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Total Price Display */
+.total-price-display {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Stronger shadow for prominence */
+  border-radius: 0 0 0 12px !important; /* Only bottom-left rounded corner */
+  background-color: #28a745 !important; /* Change to a success/green color */
+  color: white !important;
+  font-weight: 600;
+  padding: 1rem 1.5rem !important; /* More padding */
+  transition: opacity 0.5s ease; /* Fade in/out */
+  z-index: 1050; /* Ensure it's on top */
+}
+
+/* Home Page Specifics */
+.home-background {
+  /* Inherits card:hover effects potentially, but usually full-screen */
+  /* Ensure it has no border-radius for full screen */
+  border-radius: 0 !important;
+  padding: 0 !important; /* Remove internal padding */
+}
+
+.home-background .card {
+  border-radius: 12px; /* Keep rounded corners for the login card */
+  backdrop-filter: blur(5px); /* Apply blur to the transparent card background */
+  background-color: rgba(255, 255, 255, 0.2) !important; /* Very light transparency */
+  border: 1px solid rgba(255, 255, 255, 0.3) !important; /* Subtle white border */
+}
+
+.home-background .form-control {
+  background-color: rgba(255,255,255,0.9) !important; /* Make input more opaque for readability */
+  color: #343a40 !important;
+  border: 1px solid rgba(0,0,0,0.1) !important;
+}
+
+
+
+/* About Page Specifics */
+.about-figure-img {
+  border: 2px solid #ddd; /* Subtle border for images */
+  padding: 3px;
+}
